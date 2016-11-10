@@ -1,3 +1,4 @@
+192.168.56.102 node1.example.com
 192.168.56.101 mgmt.example.com
 192.168.56.111 db1.example.com
 192.168.56.112 db2.example.com

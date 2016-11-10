@@ -1,1 +1,0 @@
-{"rsync":{"/tmp/vagrant":{"type":"rsync","guestpath":"/tmp/vagrant","hostpath":"/Users/aboring/newc/files","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
