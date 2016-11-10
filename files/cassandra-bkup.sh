@@ -7,7 +7,7 @@ export DATE=$(date +%Y%m%d)
 export KEYSPACE=mykeyspace
 
 # snapshot directory
-# you MUST obtain this from one of the cassandra nodes and fill in list below:
+# you MUST obtain this from one of the cassandra nodes and fill in like below:
 #export SNAPDIR="/var/lib/cassandra/data/mykeyspace/users-9446386017dd11e69213o3b2b8b05b7d2/snapshots/"
 export SNAPDIR=""
 
