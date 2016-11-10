@@ -1,0 +1,12 @@
+Installation (sorta)
+
+You need Virtualbox and Vagrant. 
+https://www.virtualbox.org
+https://www.vagrantup.com
+
+1. Install Virtualbox
+2. Install Vagrant 1.8.6 or higher
+3. git clone https://github.com/andrewboring/swiftstack-cassandra-demo/new/master
+4. cd swiftstack-cassandra-demo
+5. vagrant box add centos/7
+6. vagrant up
