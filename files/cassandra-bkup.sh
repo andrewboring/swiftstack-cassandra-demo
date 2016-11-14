@@ -39,7 +39,7 @@ swift -A http://$SHOST/auth/v1.0 -U $SUSER -K password1 post cbkup-$DATE
 # use -h to read from a host file, rather than specifying list of nodes
 # ref: https://docs.datastax.com/en/cassandra/2.0/cassandra/operations/ops_backup_takes_snapshot_t.html
 
-pssh ssh -O StrictHostKeyChecking=no -i -H "192.168.56.111 192.168.56.112 192.168.56.113" -l $CUSER "nodetool snapshot mykeyspace -t $SNAPNAME"
+pssh -O StrictHostKeyChecking=no -i -H "192.168.56.111 192.168.56.112 192.168.56.113" -l $CUSER "nodetool snapshot mykeyspace -t $SNAPNAME"
 
 
 # upload to SwiftStack from Cassadnra nodes.
@@ -47,4 +47,4 @@ pssh ssh -O StrictHostKeyChecking=no -i -H "192.168.56.111 192.168.56.112 192.16
 # you'll need to use use curl(1) and manage pseudo-directories
 # and large object manifests manually.
 
-pssh ssh -O StrictHostKeyChecking=no -i -H "192.168.56.111 192.168.56.112 192.168.56.113" -l $CUSER "swift -A http://$SHOST/auth/v1.0 -U $SUSER -K $SPASS upload cbkup-$DATE $SNAPDIR/$SNAPNAME && nodetool clearsnapshot"
+pssh -O StrictHostKeyChecking=no -i -H "192.168.56.111 192.168.56.112 192.168.56.113" -l $CUSER "swift -A http://$SHOST/auth/v1.0 -U $SUSER -K $SPASS upload cbkup-$DATE $SNAPDIR/$SNAPNAME && nodetool clearsnapshot"
